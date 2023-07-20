@@ -21,17 +21,17 @@ const ToDo = () => {
             <input type="text" onChange={(e) => {setTextIn(e.target.value)}} value= {textIn}/>
             <button onClick={handleClick}>Add Todo</button>
         </div>
-        <div > 
+        <ul > 
             {
                 task && 
                 task.map((element,index)=>(
-                    <div className='list'  key={index}>
+                    <li className='list'  key={index}>
                         <h2>{element}</h2>
                         <button className="btn" onClick={()=>handleRemove(index)}>Remove</button>
-                    </div>
+                    </li>
                 ))
             }
-        </div>
+        </ul>
     </div>    
   )
 }
